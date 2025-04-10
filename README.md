@@ -1,4 +1,4 @@
-# Atmos - Weather Forcast App
+# Atmos - Weather Forecast App
 
 Intro
 
