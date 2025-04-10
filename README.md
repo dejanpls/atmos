@@ -1,8 +1,8 @@
-# Template - Weback Template Repository
+# Atmos - Weather Forcast App
 
 Intro
 
-[View the live website](https://dejanpls.github.io/[app-name])
+[View the live website](https://dejanpls.github.io/atmos)
 
 ## Table of Contents
 
@@ -19,7 +19,7 @@ Intro
 
 - **Dynamic Content Loading:** Content for each section is loaded dynamically when the user clicks the corresponding button.
 - **Webpack Bundling:** Uses Webpack to bundle and optimize the website's assets for efficient loading.
-- **Clean and Responsive Design:** The website is designed to be visually appealing on desktop and mobile devices of any size.
+- **Clean and Responsive Design:** The website is designed to be visually appealing on devices of any size.
 
 ## Technologies Used
 
@@ -29,19 +29,20 @@ Intro
 - **Webpack:** Module bundler.
 - **ESLInt:** Linter.
 - **Prettier:** Formatter.
+- **Babel:** Compiler.
 
 ## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/dejanpls/[app-name].git](https://www.google.com/search?q=https://github.com/dejanpls/[app-name].git)
+   git clone [https://github.com/dejanpls/atmos.git](https://www.google.com/search?q=https://github.com/dejanpls/atmos.git)
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd [app-name]
+   cd atmos
    ```
 
 3. Install dependencies:
@@ -54,7 +55,7 @@ Intro
 1. Start the development server:
 
    ```bash
-   npm run start # or yarn start - this depends on your webpack configuration
+   npm run dev
    ```
 
 2. Open your browser and navigate to the provided URL (usually `http://localhost:8080`).
