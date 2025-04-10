@@ -1,7 +1,5 @@
 # Atmos - Weather Forecast App
 
-Intro
-
 [View the live website](https://dejanpls.github.io/atmos)
 
 ## Table of Contents
