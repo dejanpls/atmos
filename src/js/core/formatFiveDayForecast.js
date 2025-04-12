@@ -4,16 +4,8 @@ export default function getFiveDayForecast(days) {
     const minTemps = items.map((item) => item.main.temp_min);
     const conditions = items.map((item) => item.weather[0].description);
 
-    const frequency = conditions.reduce((acc, condition) => {
-      acc[condition] = (acc[condition] || 0) + 1;
-      return acc;
-    }, {});
-
-    const mostFrequent = Object.entries(frequency).reduce(
-      (maxEntry, currentEntry) => {
-        return currentEntry[1] > maxEntry[1] ? currentEntry : maxEntry;
-      }
-    )[0];
+    const frequency = getConditionsFrequency(conditions);
+    const mostFrequent = getMostFrequentCondition(frequency);
 
     return {
       date,
@@ -22,4 +14,17 @@ export default function getFiveDayForecast(days) {
       conditions: mostFrequent,
     };
   });
+}
+
+function getConditionsFrequency(conditions) {
+  return conditions.reduce((acc, condition) => {
+    acc[condition] = (acc[condition] || 0) + 1;
+    return acc;
+  }, {});
+}
+
+function getMostFrequentCondition(frequency) {
+  return Object.entries(frequency).reduce((maxEntry, currentEntry) => {
+    return currentEntry[1] > maxEntry[1] ? currentEntry : maxEntry;
+  })[0];
 }
