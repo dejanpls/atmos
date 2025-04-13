@@ -1,5 +1,5 @@
 export default async function fetchCoordinates(query) {
-  const key = 'a6dda120a29b2c07e465fd131f48ceaf';
+  const key = process.env.WEATHER_API_KEY;
   try {
     const response = await fetch(
       `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=1&appid=${key}`,

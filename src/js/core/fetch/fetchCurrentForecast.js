@@ -1,5 +1,5 @@
 export default async function fetchTodaysData(lat, lon) {
-  const key = 'a6dda120a29b2c07e465fd131f48ceaf';
+  const key = process.env.WEATHER_API_KEY;
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`,

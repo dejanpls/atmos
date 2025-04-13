@@ -1,7 +1,7 @@
 import { format } from 'date-fns';
 
 export default async function fetchForecast(lat, lon) {
-  const key = 'a6dda120a29b2c07e465fd131f48ceaf';
+  const key = process.env.WEATHER_API_KEY;
   try {
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=metric`,
