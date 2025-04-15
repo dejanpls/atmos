@@ -8,24 +8,35 @@
   <body>
     <div class="wrapper">
       <div id="nav-bar">
-        <div id="search-container">
-          <button type="button" id="search-btn">Search</button>
-        </div>
+        <button type="button" id="search-toggle">Search</button>
+        <div id="search-container"></div>
         <div id="logo">Atmos</div>
         <button type="button" id="metrics-toggle">°C</button>
       </div>
-      <div id="summary-container">
-        <h1 id="location">Bruchsal</h1>
-        <img id="icon" src="#" alt="current weather conditions icon" />
-        <h2 id="temp">12<span class="unit">°C</span></h2>
-        <h2 id="feels-like">11<span class="unit">°C</span></h2>
-        <h3 id="conditions">Scattered clouds</h3>
-      </div>
-      <div id="24hrs-container">
-        <h2 id="next24hrs-title">Next 24 hours</h2>
-      </div>
-      <div id="five-day-container">
-        <h2 id="five-day-title">Five-day forecast</h2>
+      <div id="content">
+        <div id="summary-container">
+          <h1 id="location">Moscow</h1>
+
+          <img id="icon" src="#" alt="current weather conditions icon" />
+          <h2 id="temp">
+            <span id="temp-int">11</span>
+            <span class="unit">°C</span>
+          </h2>
+
+          <h4 id="feels-like">
+            <span id="feels-like-txt">Feels like</span>
+            <span id="feels-like-int">11</span>
+            <span class="unit">°C</span>
+          </h4>
+
+          <h3 id="conditions">Scattered clouds</h3>
+        </div>
+        <!-- <div id="24hrs-container">
+          <h2 id="next24hrs-title">Next 24 hours</h2>
+        </div>
+        <div id="five-day-container">
+          <h2 id="five-day-title">Five-day forecast</h2>
+        </div> -->
       </div>
       <footer>
         <p>created by <a href="https://github.com/dejanpls/">@dejanpls</a></p>
