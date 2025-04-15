@@ -21,6 +21,7 @@ function getCurrentConditions(response) {
   const conditions = {
     location: response.name,
     conditions: response.weather[0].description,
+    icon: response.weather[0].icon,
     temp: Math.ceil(response.main.temp),
     feels_like: Math.ceil(response.main.feels_like),
   };
