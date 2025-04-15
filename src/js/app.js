@@ -1,28 +1,12 @@
-import fetchTodaysData from './core/fetch/fetchCurrentForecast.js';
-import fetchCoordinates from './core/fetch/geocode.js';
-import fetchFiveDayData from './core/fetch/fetchForecast.js';
-import formatFiveDayForecast from './core/utils/formatFiveDayForecast.js';
+import Search from './core/ui/search.js';
+import data from './core/utils/data.js';
 
 export default class App {
-  static async init() {
-    const coordinates = await fetchCoordinates('moscow');
-    const weatherToday = await fetchTodaysData(
-      coordinates.latitude,
-      coordinates.longitude
-    );
-    console.log('Weather today:', weatherToday);
+  static init() {
+    data('london'); // preload London as a default location
 
-    const weather = await fetchFiveDayData(
-      coordinates.latitude,
-      coordinates.longitude
-    );
-    console.log('Next 24 hrs:');
-    console.log(weather.next24hrs);
-
-    console.log('Five-day forecast:');
-
-    const fiveDayForecast = formatFiveDayForecast(weather.nextFivedays);
-
-    console.log(fiveDayForecast);
+    document
+      .querySelector('#search-toggle')
+      .addEventListener('click', () => Search.toggle());
   }
 }
