@@ -20,6 +20,7 @@ export default async function fetchTodaysData(lat, lon) {
 function getCurrentConditions(response) {
   const conditions = {
     location: response.name,
+    timestamp: response.dt,
     conditions: response.weather[0].description,
     icon: response.weather[0].icon,
     temp: Math.ceil(response.main.temp),
