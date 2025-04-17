@@ -62,6 +62,6 @@ function get24HrsConditions(list) {
   return list.map((item) => ({
     time: item.dt_txt.split(' ')[1].slice(0, 5), // e.g. 18:00
     temp: Math.ceil(item.main.temp),
-    conditions: item.weather[0].description,
+    icon: item.weather[0].icon,
   }));
 }
