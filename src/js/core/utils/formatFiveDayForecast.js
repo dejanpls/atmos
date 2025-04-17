@@ -33,6 +33,6 @@ function getMostFrequentCondition(frequency) {
 
 function getWeatherIcon(icons) {
   const dayIcons = icons.filter((icon) => icon.endsWith('d'));
-  return dayIcons[0] === undefined ? icons[0] : dayIcons[0];
+  return dayIcons[0] === undefined ? icons[-1] : dayIcons[0];
 }
 
