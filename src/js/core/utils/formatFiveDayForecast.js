@@ -7,12 +7,10 @@ export default function getFiveDayForecast(days) {
 
     const frequency = getConditionsFrequency(conditions);
     const mostFrequent = getMostFrequentCondition(frequency);
-    const dayIcons = icons.filter((icon) => icon.endsWith('d'));
-    const mostFrequentIcon = getIconFrequency(dayIcons);
-
+    
     return {
       date,
-      icon: mostFrequentIcon,
+      icon: getWeatherIcon(icons),
       max: Math.ceil(Math.max(...maxTemps)),
       min: Math.ceil(Math.min(...minTemps)),
       conditions: mostFrequent,
@@ -33,9 +31,8 @@ function getMostFrequentCondition(frequency) {
   })[0];
 }
 
-function getIconFrequency(dayIcons) {
-  return dayIcons.reduce((acc, icon) => {
-    acc[icon] = (acc[icon] || 0) + 1;
-    return acc;
-  }, {});
+function getWeatherIcon(icons) {
+  const dayIcons = icons.filter((icon) => icon.endsWith('d'));
+  return dayIcons[0] === undefined ? icons[0] : dayIcons[0];
 }
+
