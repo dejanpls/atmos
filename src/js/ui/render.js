@@ -12,6 +12,30 @@ export default class Render {
       weatherToday.timestamp
     );
   }
+
+  static cards(weather24hrs) {
+    const container = document.querySelector('#next24hrs-container');
+    
+    weather24hrs.forEach(hour => {
+      const card = document.createElement('div');
+      card.id = 'card';
+      const time = document.createElement('p');
+      time.id = 'card-time'
+      time.textContent = hour.time;
+      const icon = document.createElement('img');
+      icon.id = 'card-icon';
+      icon.src = getIconPath(hour.icon);
+      const temp = document.createElement('p');
+      temp.id = 'card-temp';
+      temp.textContent = `${hour.temp} °C`;
+      
+      card.appendChild(time);
+      card.appendChild(icon);
+      card.appendChild(temp);
+      
+      container.appendChild(card);
+    });
+  }
 }
 
 function getIconPath(icon) {
