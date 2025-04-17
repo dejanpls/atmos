@@ -1,6 +1,6 @@
 export default class Notify {
   static error(message, timeout) {
-    const container = document.querySelector('#content');
+    const container = document.querySelector('.wrapper');
 
     // Clear existing notification if one is already showing
     const existing = document.querySelector('#notification-box');

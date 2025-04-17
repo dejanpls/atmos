@@ -1,4 +1,5 @@
 import { format } from 'date-fns';
+import { hideLoading } from '../../ui/loading.js';
 
 export default async function fetchForecast(lat, lon) {
   const key = process.env.WEATHER_API_KEY;
@@ -16,6 +17,8 @@ export default async function fetchForecast(lat, lon) {
     return getData(data);
   } catch (error) {
     return renderError(error);
+  } finally {
+    hideLoading();
   }
 }
 

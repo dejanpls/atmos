@@ -1,6 +1,9 @@
+import { showLoading } from "../../ui/loading";
+
 export default async function fetchCoordinates(query) {
   const key = process.env.WEATHER_API_KEY;
   try {
+    showLoading();
     const response = await fetch(
       `http://api.openweathermap.org/geo/1.0/direct?q=${query}&limit=1&appid=${key}`,
       { mode: 'cors' }

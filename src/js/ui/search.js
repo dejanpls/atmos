@@ -22,6 +22,13 @@ export default class Search {
       }
     });
 
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && input.value !== '') {
+        retrieveLocation(input.value.trim());
+        input.blur();
+      }
+    });
+
     searchContainer.appendChild(closeBtn);
     searchContainer.appendChild(input);
     searchContainer.appendChild(submit);

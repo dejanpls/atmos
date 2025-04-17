@@ -13,10 +13,14 @@ export default async function retrieveLocation(query) {
     return;
   }
 
+  console.log("Coordinates gathered");
+
   const weatherToday = await fetchTodaysData(
     coordinates.latitude,
     coordinates.longitude
   );
+
+  console.log('Weather today fetched');
 
   Render.main(weatherToday);
 
