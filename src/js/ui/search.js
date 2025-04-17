@@ -1,4 +1,4 @@
-import data from '../utils/data.js';
+import data from '../core/utils/data.js';
 
 export default class Search {
   static toggle() {

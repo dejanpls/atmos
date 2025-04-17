@@ -19,5 +19,5 @@ function getIconPath(icon) {
 }
 
 function formatDaytime(timestamp) {
-  return format(timestamp * 1000, 'EEE MMMM d, HH:mm');
+  return format(timestamp * 1000, 'EEE MMM d, HH:mm');
 }

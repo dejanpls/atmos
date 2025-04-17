@@ -1,4 +1,4 @@
-import Search from './core/ui/search.js';
+import Search from './ui/search.js';
 import data from './core/utils/data.js';
 
 export default class App {
