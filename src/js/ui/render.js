@@ -15,6 +15,7 @@ export default class Render {
 
   static cards(weather24hrs) {
     const container = document.querySelector('#next24hrs-container');
+    if (container.childElementCount > 0) container.replaceChildren();
     
     weather24hrs.forEach(hour => {
       const card = document.createElement('div');
@@ -34,6 +35,44 @@ export default class Render {
       card.appendChild(temp);
       
       container.appendChild(card);
+    });
+  }
+
+  static fiveDay(weatherFiveDays) {
+    const container = document.querySelector('#five-day-container');
+
+    if (container.childElementCount > 0) container.replaceChildren();
+    
+    weatherFiveDays.forEach(array => {
+      const day = document.createElement('div');
+      day.id = 'day';
+      const date = document.createElement('p');
+      date.id = 'day-date'
+      date.textContent = array.date;
+
+      const icon = document.createElement('img');
+      icon.id = 'day-icon';
+      icon.src = getIconPath(array.icon);
+
+      const conditions = document.createElement('p');
+      conditions.id = 'day-conditions';
+      conditions.textContent = array.conditions;
+
+      const max = document.createElement('p');
+      max.id = 'day-max';
+      max.textContent = `${array.max} °C`;
+
+      const min = document.createElement('p');
+      min.id = 'day-min';
+      min.textContent = `${array.min} °C`;
+      
+      day.appendChild(date);
+      day.appendChild(icon);
+      day.appendChild(conditions);
+      day.appendChild(max);
+      day.appendChild(min);
+      
+      container.appendChild(day);
     });
   }
 }
