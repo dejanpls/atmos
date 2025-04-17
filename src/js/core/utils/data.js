@@ -27,6 +27,7 @@ export default async function data(query) {
   );
 
   console.log('Next 24 hrs:');
+  Render.cards(weather.next24hrs);
   console.log(weather.next24hrs);
 
   console.log('Five-day forecast:');
