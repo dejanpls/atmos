@@ -1,4 +1,4 @@
-import data from '../core/utils/data.js';
+import retrieveLocation from '../core/utils/retrieveLocation.js';
 
 export default class Search {
   static toggle() {
@@ -18,7 +18,7 @@ export default class Search {
 
     submit.addEventListener('mousedown', () => {
       if (input.value !== '') {
-        data(input.value.trim());
+        retrieveLocation(input.value.trim());
       }
     });
 

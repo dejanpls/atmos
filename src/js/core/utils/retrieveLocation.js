@@ -1,11 +1,11 @@
 import fetchCoordinates from '../fetch/geocode.js';
 import fetchTodaysData from '../fetch/fetchCurrentForecast.js';
 import fetchFiveDayData from '../fetch/fetchForecast.js';
-import formatFiveDayForecast from '../utils/formatFiveDayForecast.js';
+import formatFiveDayForecast from './formatFiveDayForecast.js';
 import Render from '../../ui/render.js';
 import Notify from '../../ui/notify.js';
 
-export default async function data(query) {
+export default async function retrieveLocation(query) {
   const coordinates = await fetchCoordinates(query);
 
   if (!coordinates) {
@@ -19,21 +19,15 @@ export default async function data(query) {
   );
 
   Render.main(weatherToday);
-  console.log(weatherToday);
 
   const weather = await fetchFiveDayData(
     coordinates.latitude,
     coordinates.longitude
   );
 
-  console.log('Next 24 hrs:');
   Render.cards(weather.next24hrs);
-  console.log(weather.next24hrs);
-
-  console.log('Five-day forecast:');
 
   const fiveDayForecast = formatFiveDayForecast(weather.nextFivedays);
 
   Render.fiveDay(fiveDayForecast);
-  console.log(fiveDayForecast);
 }
