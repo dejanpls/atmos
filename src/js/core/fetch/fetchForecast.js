@@ -1,11 +1,13 @@
 import { format } from 'date-fns';
 import { hideLoading } from '../../ui/loading.js';
+import Units from '../../ui/units.js';
 
 export default async function fetchForecast(lat, lon) {
   const key = process.env.WEATHER_API_KEY;
+  const unit = Units.getUnit();
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=metric`,
+      `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=${unit}`,
       { mode: 'cors' }
     );
 

@@ -1,8 +1,11 @@
+import Units from '../../ui/units.js';
+
 export default async function fetchTodaysData(lat, lon) {
   const key = process.env.WEATHER_API_KEY;
+  const unit = Units.getUnit();
   try {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`,
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=${unit}`,
       { mode: 'cors' }
     );
 

@@ -1,5 +1,6 @@
 import Search from './ui/search.js';
 import retrieveLocation from './core/utils/retrieveLocation.js';
+import Units from './ui/units.js';
 
 export default class App {
   static init() {
@@ -8,5 +9,9 @@ export default class App {
     document
       .querySelector('#search-toggle')
       .addEventListener('click', () => Search.toggle());
+
+    document
+      .querySelector('#metrics-toggle')
+      .addEventListener('click', () => Units.toggle());
   }
 }
