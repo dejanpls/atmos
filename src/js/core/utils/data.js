@@ -34,5 +34,6 @@ export default async function data(query) {
 
   const fiveDayForecast = formatFiveDayForecast(weather.nextFivedays);
 
+  Render.fiveDay(fiveDayForecast);
   console.log(fiveDayForecast);
 }
