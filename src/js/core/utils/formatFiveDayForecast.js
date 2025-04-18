@@ -7,7 +7,7 @@ export default function getFiveDayForecast(days) {
 
     const frequency = getConditionsFrequency(conditions);
     const mostFrequent = getMostFrequentCondition(frequency);
-    
+
     return {
       date,
       icon: getWeatherIcon(icons),
@@ -33,6 +33,5 @@ function getMostFrequentCondition(frequency) {
 
 function getWeatherIcon(icons) {
   const dayIcons = icons.filter((icon) => icon.endsWith('d'));
-  return dayIcons[0] === undefined ? icons[-1] : dayIcons[0];
+  return dayIcons[0] === undefined ? icons[0] : dayIcons[0];
 }
-
