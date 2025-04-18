@@ -10,7 +10,7 @@ export default class Render {
     document.querySelector('#feels-like-int').textContent =
       weatherToday.feels_like + ' ' + Units.symbol();
     document.querySelector('#conditions').textContent = weatherToday.conditions;
-    document.querySelector('#time').textContent = formatDaytime(
+    document.querySelector('#time').textContent = getUpdateTime(
       weatherToday.timestamp
     );
   }
@@ -83,7 +83,7 @@ function getIconPath(icon) {
   return `https://openweathermap.org/img/wn/${icon}.png`;
 }
 
-function formatDaytime(timestamp) {
+function getUpdateTime(timestamp) {
   const formatted = formatDistanceToNow(new Date(timestamp * 1000), {
     addSuffix: true,
   });
