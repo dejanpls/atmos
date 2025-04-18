@@ -1,4 +1,6 @@
 @import url('./navigation.css');
+@import url('./summary.css');
+@import url('./next24hrs.css');
 
 * {
   margin: 0;

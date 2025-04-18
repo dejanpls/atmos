@@ -1,0 +1,35 @@
+div#summary-container {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 48px 0;
+}
+
+p#time {
+  font-size: 16px;
+  color: gray;
+}
+
+h1#location {
+  font-size: 48px;
+}
+
+img#icon {
+  width: 50px;
+}
+
+span#temp-int {
+  font-size: 64px;
+}
+
+h4#feels-like {
+  font-size: 18px;
+  color: rgb(83, 83, 83);
+}
+
+h3#conditions {
+  margin-top: 16px;
+  font-size: 32px;
+}

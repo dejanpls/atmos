@@ -9,7 +9,7 @@ div#nav-bar {
 }
 
 div#nav-bar .material-icons,
-div#nav-bar #metrics-toggle {
+div#nav-bar #unit-toggle {
   font-size: 18px;
   width: 25px;
   height: 25px;

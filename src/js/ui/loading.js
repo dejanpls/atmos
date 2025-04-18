@@ -1,7 +1,7 @@
 export function showLoading() {
   const wrapper = document.querySelector('.wrapper');
   const loader = document.createElement('div');
-  
+
   document.querySelector('#main').style.display = 'none';
 
   loader.id = 'loader';
