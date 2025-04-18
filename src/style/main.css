@@ -1,9 +1,22 @@
 @import url('./navigation.css');
 @import url('./summary.css');
 @import url('./next24hrs.css');
+@import url('./fiveday.css');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+footer {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p > a {
+  text-decoration: none;
+  color: #000000;
 }
