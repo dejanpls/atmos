@@ -4,16 +4,16 @@ export default class Search {
   static toggle() {
     const searchContainer = document.querySelector('#search-container');
 
-    const searchToggle = document.querySelector('#search-toggle');
-    searchToggle.style.display = 'none';
-
-    const closeBtn = generateBtn('close-btn', 'X', 'Close search');
+    const closeBtn = generateBtn('close-btn', 'close', 'Close search');
     const input = generateSearchBox();
-    const submit = generateBtn('search-btn', 'Search', 'Submit city search');
+    const submit = generateBtn(
+      'search-btn',
+      'arrow_forward_ios',
+      'Submit city search'
+    );
 
     input.addEventListener('blur', () => {
       searchContainer.replaceChildren();
-      searchToggle.style.display = 'block';
     });
 
     submit.addEventListener('mousedown', () => {
@@ -51,6 +51,7 @@ function generateBtn(id, text, attribute_txt) {
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.id = id;
+  btn.className = 'material-icons';
   btn.textContent = text;
   btn.setAttribute('aria-label', attribute_txt);
 
