@@ -1,4 +1,4 @@
-import { format } from 'date-fns';
+import { formatDistanceToNow } from 'date-fns';
 import Units from './units.js';
 
 export default class Render {
@@ -84,5 +84,9 @@ function getIconPath(icon) {
 }
 
 function formatDaytime(timestamp) {
-  return format(timestamp * 1000, 'EEE MMM d, HH:mm');
+  const formatted = formatDistanceToNow(new Date(timestamp * 1000), {
+    addSuffix: true,
+  });
+
+  return `Updated ${formatted}`;
 }
