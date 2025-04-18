@@ -2,26 +2,26 @@ import retrieveLocation from '../core/utils/retrieveLocation';
 
 export default class Units {
   static toggle() {
-    const btn = document.querySelector('#metrics-toggle');
+    const btn = document.querySelector('#unit-toggle');
     const main = document.querySelector('#main');
     const location = document.querySelector('#location').textContent;
 
     if (btn.textContent === '°C') {
       btn.textContent = '°F';
-      main.setAttribute('data-metrics', 'imperial');
+      main.setAttribute('data-unit', 'imperial');
       retrieveLocation(location);
     } else {
       btn.textContent = '°C';
-      main.setAttribute('data-metrics', 'metric');
+      main.setAttribute('data-unit', 'metric');
       retrieveLocation(location);
     }
   }
 
   static getUnit() {
-    return document.querySelector('#main').getAttribute('data-metrics');
+    return document.querySelector('#main').getAttribute('data-unit');
   }
 
   static symbol() {
-    return document.querySelector('#metrics-toggle').textContent;
+    return document.querySelector('#unit-toggle').textContent;
   }
 }

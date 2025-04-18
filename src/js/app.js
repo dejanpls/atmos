@@ -11,7 +11,7 @@ export default class App {
       .addEventListener('click', () => Search.toggle());
 
     document
-      .querySelector('#metrics-toggle')
+      .querySelector('#unit-toggle')
       .addEventListener('click', () => Units.toggle());
   }
 }
