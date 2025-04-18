@@ -1,4 +1,4 @@
-import { showLoading } from "../../ui/loading";
+import { hideLoading, showLoading } from '../../ui/loading';
 
 export default async function fetchCoordinates(query) {
   const key = process.env.WEATHER_API_KEY;
@@ -17,6 +17,8 @@ export default async function fetchCoordinates(query) {
     return getCoordinates(data);
   } catch (error) {
     return renderError(error);
+  } finally {
+    hideLoading();
   }
 }
 

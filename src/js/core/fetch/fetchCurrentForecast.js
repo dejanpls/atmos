@@ -1,9 +1,11 @@
+import { hideLoading, showLoading } from '../../ui/loading.js';
 import Units from '../../ui/units.js';
 
 export default async function fetchTodaysData(lat, lon) {
   const key = process.env.WEATHER_API_KEY;
   const unit = Units.getUnit();
   try {
+    showLoading();
     const response = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=${unit}`,
       { mode: 'cors' }
@@ -17,6 +19,8 @@ export default async function fetchTodaysData(lat, lon) {
     return getCurrentConditions(data);
   } catch (error) {
     return renderError(error);
+  } finally {
+    hideLoading();
   }
 }
 
