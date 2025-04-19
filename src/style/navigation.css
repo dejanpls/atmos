@@ -1,3 +1,8 @@
+div#nav-container {
+  display: flex;
+  justify-content: center;
+}
+
 div#nav-bar {
   border: 1px solid red;
   height: 40px;
@@ -6,6 +11,7 @@ div#nav-bar {
   justify-content: space-between;
   align-items: center;
   position: relative;
+  width: 930px;
 }
 
 div#nav-bar .material-icons,

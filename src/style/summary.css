@@ -1,10 +1,16 @@
 div#summary-container {
+  display: flex;
+  justify-content: center;
+}
+
+div#summary {
   border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 48px 0;
+  width: 930px;
 }
 
 p#time {

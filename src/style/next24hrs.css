@@ -1,20 +1,30 @@
-div#next24hrs-container {
+#cards {
+  max-width: 930px;
+  margin: 0 auto;
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
   padding: 8px;
   scroll-padding: 16px;
-  scrollbar-width: none; /* Firefox */
+
+  scrollbar-width: none;
+}
+
+#title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #next24hrs-title {
+  width: 930px;
   font-size: 18px;
   padding-left: 8px;
   padding-top: 8px;
 }
 
-div#next24hrs-container::-webkit-scrollbar {
+div#cards::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Edge */
 }
 

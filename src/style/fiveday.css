@@ -1,3 +1,13 @@
+div#five-day-forecast-container {
+  display: flex;
+  justify-content: center;
+}
+
+div#five-day-forecast {
+  width: 930px;
+  border: 1px solid goldenrod;
+}
+
 div#five-day-container {
   display: flex;
   flex-direction: column;
@@ -6,24 +16,27 @@ div#five-day-container {
 div#day {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 8px;
+  width: 100%;
+  padding: 0 8px;
 }
 
 div#day p#day-date {
-  width: 70px;
+  min-width: 70px;
 }
 
 div#day p#day-conditions {
-  width: 120px;
+  min-width: 120px;
 }
 
 div#day p#day-max {
-  width: 42px;
+  min-width: 42px;
 }
 
 div#day p#day-min {
-  width: 42px;
+  min-width: 42px;
+  text-align: end;
 }
 
 #five-day-title {
