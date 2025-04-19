@@ -16,7 +16,7 @@ export default class Render {
   }
 
   static cards(weather24hrs) {
-    const container = document.querySelector('#next24hrs-container');
+    const container = document.querySelector('#cards');
     if (container.childElementCount > 0) container.replaceChildren();
 
     weather24hrs.forEach((hour) => {
