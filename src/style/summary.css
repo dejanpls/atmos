@@ -1,10 +1,10 @@
 div#summary-container {
   display: flex;
   justify-content: center;
+  background-color: #e1e5f2;
 }
 
 div#summary {
-  border: 1px solid blue;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

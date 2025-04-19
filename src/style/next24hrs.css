@@ -33,8 +33,9 @@ div#cards::-webkit-scrollbar {
   scroll-snap-align: start;
   width: 100px;
   height: 150px;
-  background-color: #dbdbdb;
+  background-color: #e1e5f2;
   padding: 8px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   align-items: center;

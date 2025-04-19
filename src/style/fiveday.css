@@ -5,12 +5,17 @@ div#five-day-forecast-container {
 
 div#five-day-forecast {
   width: 930px;
-  border: 1px solid goldenrod;
 }
 
 div#five-day-container {
   display: flex;
   flex-direction: column;
+}
+
+div#five-day-container div#day:nth-child(1),
+div#five-day-container div#day:nth-child(3),
+div#five-day-container div#day:nth-child(5) {
+  background-color: #f8f7ff;
 }
 
 div#day {
@@ -37,6 +42,7 @@ div#day p#day-max {
 div#day p#day-min {
   min-width: 42px;
   text-align: end;
+  color: gray;
 }
 
 #five-day-title {

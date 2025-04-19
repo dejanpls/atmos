@@ -7,6 +7,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #003049;
 }
 
 div#loader {
@@ -21,9 +23,14 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #003049;
+}
+
+footer > p {
+  color: aliceblue;
 }
 
 footer p > a {
   text-decoration: none;
-  color: #000000;
+  color: aliceblue;
 }
