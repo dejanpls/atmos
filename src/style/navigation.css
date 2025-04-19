@@ -19,7 +19,6 @@ div#nav-bar #unit-toggle {
   font-size: 18px;
   width: 25px;
   height: 25px;
-  width: 50px;
 }
 
 div#nav-bar > button {
@@ -33,6 +32,7 @@ div#nav-bar > button#unit-toggle {
   background-color: #003049;
   border-radius: 16px;
   border: 1px solid aliceblue;
+  width: 50px;
 }
 
 div#nav-bar #logo {
@@ -40,24 +40,4 @@ div#nav-bar #logo {
   font-family: 'Potta One', system-ui;
   font-weight: 200;
   color: aliceblue;
-}
-
-div#search-container {
-  position: absolute;
-  top: 7px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-div#search-container > * {
-  height: 25px;
-}
-
-div#search-container > #close-btn {
-  width: 25px;
-}
-
-div#serch-container > input {
-  font-size: 16px;
 }

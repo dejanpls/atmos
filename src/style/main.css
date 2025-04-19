@@ -2,6 +2,7 @@
 @import url('./summary.css');
 @import url('./next24hrs.css');
 @import url('./fiveday.css');
+@import url('./search.css');
 
 * {
   margin: 0;

@@ -1,0 +1,31 @@
+div#search-container {
+  position: absolute;
+  top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#search-container > button#close-btn,
+div#search-container > button#search-btn {
+  height: 40px;
+  width: 40px;
+}
+
+div#search-container > button#search-btn {
+  width: 70px;
+  border-radius: 0 16px 16px 0;
+}
+
+div#search-container > .material-icons {
+  border: none;
+  color: #003049;
+}
+
+div#search-container > input {
+  font-size: 18px;
+  height: 40px;
+  border: none;
+  padding: 8px;
+  color: #003049;
+}
