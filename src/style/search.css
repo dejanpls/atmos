@@ -12,6 +12,10 @@ div#search-container > button#search-btn {
   width: 40px;
 }
 
+div#search-container > button#close-btn {
+  border-radius: 8px 0 0 8px;
+}
+
 div#search-container > button#search-btn {
   width: 70px;
   border-radius: 0 16px 16px 0;
@@ -28,4 +32,5 @@ div#search-container > input {
   border: none;
   padding: 8px;
   color: #003049;
+  outline: none;
 }
