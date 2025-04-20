@@ -28,6 +28,10 @@ div#nav-bar > button {
   outline: none;
 }
 
+div#nav-bar .material-icons {
+  margin-right: 25px;
+}
+
 div#nav-bar > button#unit-toggle {
   background-color: #003049;
   border-radius: 16px;
@@ -196,6 +200,12 @@ div#search-container > button#search-btn {
   width: 40px;
 }
 
+div#search-container > button#close-btn {
+  border-radius: 8px 0 0 8px;
+  padding: 0;
+  margin: 0;
+}
+
 div#search-container > button#search-btn {
   width: 70px;
   border-radius: 0 16px 16px 0;
@@ -212,6 +222,26 @@ div#search-container > input {
   border: none;
   padding: 8px;
   color: #003049;
+  outline: none;
+}
+
+div#notification-box {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #c1121f;
+  height: 50px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+div#notification-box > p {
+  font-size: 18px;
+  color: aliceblue;
 }
 
 * {
@@ -220,6 +250,10 @@ div#search-container > input {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: #003049;
+}
+
+div.wrapper {
+  position: relative;
 }
 
 div#loader {
@@ -247,4 +281,4 @@ footer p > a {
 }
 
 
-/*# sourceMappingURL=main.56667985ed526971e872.css.map*/
+/*# sourceMappingURL=main.488ff929802fa08ddbc1.css.map*/
