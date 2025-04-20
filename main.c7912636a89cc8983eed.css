@@ -220,6 +220,7 @@ div#search-container > input {
   font-size: 18px;
   height: 40px;
   border: none;
+  border-radius: 0;
   padding: 8px;
   color: #003049;
   outline: none;
@@ -281,4 +282,4 @@ footer p > a {
 }
 
 
-/*# sourceMappingURL=main.488ff929802fa08ddbc1.css.map*/
+/*# sourceMappingURL=main.c7912636a89cc8983eed.css.map*/
