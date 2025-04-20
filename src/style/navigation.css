@@ -28,6 +28,10 @@ div#nav-bar > button {
   outline: none;
 }
 
+div#nav-bar .material-icons {
+  margin-right: 25px;
+}
+
 div#nav-bar > button#unit-toggle {
   background-color: #003049;
   border-radius: 16px;

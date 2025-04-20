@@ -3,6 +3,7 @@
 @import url('./next24hrs.css');
 @import url('./fiveday.css');
 @import url('./search.css');
+@import url('./notify.css');
 
 * {
   margin: 0;
@@ -10,6 +11,10 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
   color: #003049;
+}
+
+div.wrapper {
+  position: relative;
 }
 
 div#loader {
